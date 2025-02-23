@@ -8,27 +8,26 @@ function TaskList() {
         {
             "id": 1,
             "title": "Aprender React",
-            "completed": false
+
         },
         {
             "id": 2,
             "title": "Estudiar JavaScript",
-            "completed": true
+
         },
         {
             "id": 3,
             "title": "Practicar ejercicios de programación",
-            "completed": false
         },
         {
             "id": 4,
             "title": "Leer documentación de TypeScript",
-            "completed": false
+
         },
         {
             "id": 5,
             "title": "Construir una pequeña app",
-            "completed": true
+
         }
     ]
 
@@ -42,11 +41,11 @@ function TaskList() {
                     return (<div key={index}>
 
                         <Tasks task={task} />
-                 </div>)
+                    </div>)
 
                 })}
             </div>
-           </div>
+        </div>
     )
 }
 
