@@ -1,51 +1,22 @@
-import React from "react";
+import React, { useState } from "react";
 import Tasks from "./Tasks";
 
 
 
-function TaskList() {
-    const tasksHardcoded = [
-        {
-            "id": 1,
-            "title": "Aprender React",
-
-        },
-        {
-            "id": 2,
-            "title": "Estudiar JavaScript",
-
-        },
-        {
-            "id": 3,
-            "title": "Practicar ejercicios de programación",
-        },
-        {
-            "id": 4,
-            "title": "Leer documentación de TypeScript",
-
-        },
-        {
-            "id": 5,
-            "title": "Construir una pequeña app",
-
-        }
-    ]
-
+function TaskList({tasks, onDelete}){
+//he de reconocer que acabo de terminar a las dos de la mañana puesto no conseguia que se viera
+//y al preguntarle al chat me solucionó que tasks y onDeletetenia que pasarlo como props. y era eso
 
     return (
         <div>
-            <h2>Esto es la lista de tareas
-            </h2>
-            <div>
-                {tasksHardcoded.map((task, index) => {
-                    return (<div key={index}>
-
-                        <Tasks task={task} />
-                    </div>)
-
-                })}
-            </div>
+        <h2>Esto es la lista de tareas</h2>
+        <div>
+            {tasks.map((task, index) => (
+                <Tasks key={index} task={task} onDelete = {onDelete} />
+            ))}
         </div>
+{/* sadasaqui simplemente con el map para que recorra la arry y genere la lista de todolistpasandole los props de las taks y el delete para que se actualice */}
+    </div>
     )
 }
 
