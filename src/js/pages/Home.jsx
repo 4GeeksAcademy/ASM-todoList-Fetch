@@ -33,3 +33,6 @@ const Home = () => {
 }
 
 export default Home
+
+//y por ultimo he consultado el chat principalmente pq con los props me cuesta mucho aun de oasarlo al padre y de este al hijo y asi sobre todo la manera de 
+// escribirlo que a veces van con prop. y otras veces {} bueno, que pediré me ntoría ya que es un campo que de especial me está constando
