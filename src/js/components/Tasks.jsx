@@ -36,7 +36,6 @@ function Tasks(props) {
                          */}
                 </div>
 
-
             </div>
         </>
     )
