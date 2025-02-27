@@ -32,12 +32,7 @@ const Home = () => {
 
 	const addTasks = async (title) => {
 
-
-		const newTask = {
-			id: Date.now(),
-			title,
-			is_done: false,
-		};
+		
 		try {
 			const response = await fetch(`${API_URL}/todos/${ID_USER}`, {
 				method: "POST",
@@ -53,8 +48,9 @@ const Home = () => {
 			if (!response.ok) {
 				throw new Error(`Error HTTP! Estado: ${response.status}`);
 			}
-			const data = await response.json();
-			setTasks((tasks) => [...tasks, newTask]);
+			
+			const newTask = await response.json();
+            setTasks((prevTasks) => [...prevTasks, newTask]);
 		} catch (error) {
 			console.error("Hubo un problema con la solicitud:", error);
 		}
@@ -65,7 +61,6 @@ const Home = () => {
 	// Aqui cambiamos el array con SetTaks con una funcion flecha y un expansor poniendo que leyera todo de las anteriores tareas y, agregase la nueva 
 
 
-// POST
 
 const handleDelete = async (taskId) => {
 	try {

@@ -3,7 +3,7 @@ import React, { useState } from "react";
 function Taskform(props) {
     const [title, setTitle] = useState("");
     const [error, setError] = useState("");
-// Aqui siguiendo las clases grabadas empece con el tittle y el error para que no pudiera quedar vacío el imput
+    // Aqui siguiendo las clases grabadas empece con el tittle y el error para que no pudiera quedar vacío el imput
 
     function handleSubmit(e) {
         e.preventDefault()
